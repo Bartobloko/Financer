@@ -1,0 +1,17 @@
+
+<div class="loginBox">
+  <mat-card appearance="outlined">
+    <h3>Welcome Back</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" formControlName="password" type="password">
+      </mat-form-field>
+      <button [disabled]="!loginForm.valid" mat-flat-button type="submit" >Submit</button>
+    </form>
+  </mat-card>
+</div>

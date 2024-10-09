@@ -1,0 +1,35 @@
+<div class="cta">
+  <div class="content">
+    @switch (activeButtonIndex){
+      @case (0) {
+        <app-cta-about></app-cta-about>
+      }
+      @case (1) {
+        <app-cta-charts></app-cta-charts>
+      }
+      @case (2) {
+        <app-cta-calendar></app-cta-calendar>
+      }
+      @case (3) {
+        <app-cta-join-us></app-cta-join-us>
+      }
+    }
+  </div>
+  <div class="buttons">
+    @for (button of buttons; track index; let index = $index) {
+      <button
+        matRipple
+        [ngClass]="{'active': activeButtonIndex === index}"
+        (click)="changeSlide(index)">
+       </button>
+    }
+  </div>
+  <div class="media">
+    <a aria-label href="https://github.com/Bartobloko" target="_blank">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" svgIcon="githubIcon"></mat-icon>
+    </a>
+    <a aria-label href="https://www.linkedin.com/in/bartosz-blok-49809331a/?locale=en_US"  target="_blank">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" svgIcon="linkedInIcon"></mat-icon>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<mat-toolbar>
+    @if(!isAuthenticated) {
+      <span>
+        <a routerLink="/" mat-icon-button	>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+        </a>
+      </span>
+      <span>
+        <a routerLinkActive="active-link" routerLink="/login" mat-button>
+          Login
+        </a>
+        <a routerLinkActive="active-link" routerLink="/signup" mat-button>
+          Sign up
+        </a>
+      </span>
+    } @else {
+      <span>
+        <a routerLink="/home" mat-icon-button>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+        </a>
+      </span>
+      <span>
+        <a routerLink="/calendar" mat-icon-button>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+        </a>
+        <a routerLink="/settings" mat-icon-button>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+        </a>
+      </span>
+    }
+</mat-toolbar>

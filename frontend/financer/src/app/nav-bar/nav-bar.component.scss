@@ -1,0 +1,12 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  background: #810081;
+  a {
+    text-decoration: none;
+    span {
+      margin-left: 16px;
+    }
+  }
+}

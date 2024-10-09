@@ -1,0 +1,53 @@
+.cta {
+  height: 100%;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7) 0%,   // Starting with fully transparent
+      rgb(30, 1, 30) 50%// Ending with solid color (e.g., white)
+  ),
+  url("/assets/graph.png") no-repeat center/cover;
+
+  .content{
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttons{
+    height: 5%;
+    text-align: center;
+    > button {
+      background: transparent;
+      margin: 5px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      outline: none;
+      border: #810081 1px solid;
+      cursor: pointer;
+      &.active {
+        background: #810081
+      }
+      &:hover {
+        background: #6a026a;
+        border: #6a026a 1px solid;
+      }
+    }
+  }
+}
+
+.media {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: calc(50% - 40px);
+  right: 20px;
+  a {
+    margin-top: 20px;
+  }
+  @media (max-width: 1028px) {
+    display: none;
+  }
+}
+

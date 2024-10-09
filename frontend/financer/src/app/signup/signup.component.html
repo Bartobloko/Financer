@@ -1,0 +1,21 @@
+
+<div class="signupBox">
+  <mat-card appearance="outlined">
+    <h3>Create an account</h3>
+    <form [formGroup]="signupForm" (ngSubmit)="signup()">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="E-mail" formControlName="email">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" formControlName="password" type="password">
+      </mat-form-field>
+      <button [disabled]="!signupForm.valid" mat-flat-button type="submit" >Submit</button>
+    </form>
+  </mat-card>
+</div>

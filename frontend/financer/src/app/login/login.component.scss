@@ -1,0 +1,29 @@
+.loginBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  mat-card {
+    display: flex;
+    justify-content: center;
+    height: 55%;
+    min-width: 22%;
+    padding: 30px;
+    background: #201a1f;
+    box-shadow: 0 8px 16px 8px rgba(0,0,0,0.5);
+
+    h3{
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+

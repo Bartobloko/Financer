@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatToolbar} from "@angular/material/toolbar";
 import {Router, RouterLink, RouterLinkActive} from "@angular/router";
 import {MatAnchor} from "@angular/material/button";
@@ -20,7 +20,7 @@ import {AuthService} from "../shared/services/auth.service";
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit{
   isAuthenticated = false;
 
   constructor(

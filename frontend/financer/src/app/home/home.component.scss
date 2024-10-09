@@ -1,0 +1,16 @@
+.homeLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    ". ."
+    ". ."
+    "calendar calendar";
+  >div {
+    padding: 10px 50px;
+    mat-card {
+      height: 100%;
+    }
+  }
+}
+.calendar { grid-area: calendar; }

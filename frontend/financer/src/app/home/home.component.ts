@@ -52,7 +52,7 @@ export class HomeComponent implements AfterViewInit {
       console.error('Failed to get the context.');
       return;
     }
-    const newChart = new Chart(ctx, {
+    new Chart(ctx, {
       type: type,
       data: {
         labels: xData,
